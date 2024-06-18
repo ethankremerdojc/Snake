@@ -1,7 +1,3 @@
-import pprint
-import os
-import sys
-import pickle
 import pyglet
 
 class Snake():
@@ -26,7 +22,6 @@ class Snake():
             self.kill()
 
     def move(self, direction, window_height, window_width):
-
         new_position = [-1, -1]
 
         if direction == "left":
@@ -49,7 +44,6 @@ class Snake():
         self.update_positions(new_position)
 
     def draw(self):
-
         rectangles = []
 
         head_position = self.position['head']

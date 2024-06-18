@@ -1,7 +1,5 @@
 import pyglet
-from pprint import pprint
 from snake import Snake
-import time
 import random
 
 window_width = 800
@@ -12,9 +10,9 @@ grid = [[[i,j] for j in range(40)] for i in range(40)]
 snake = Snake()
 
 def create_food():
-    global grid, snake
+    
+    
     on_snake = True
-    # print('Attempting to create food')
     while on_snake == True:
         random_row = random.choice(grid)
         random_point = random.choice(random_row)
@@ -68,5 +66,5 @@ def on_draw():
     for food in foods:
         food.draw()
 
-pyglet.clock.schedule_interval(update, 0.08)
+pyglet.clock.schedule_interval(update, 0.15)
 pyglet.app.run()
