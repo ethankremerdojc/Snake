@@ -31,13 +31,17 @@ food = create_food()
 @window.event
 def on_key_press(symbol, modifiers):
     if symbol == pyglet.window.key.RIGHT:
-        snake.direction = 'right'
+        if snake.direction != 'left':
+            snake.direction = 'right'
     if symbol == pyglet.window.key.LEFT:
-        snake.direction = 'left'
+        if snake.direction != 'right':
+            snake.direction = 'left'
     if symbol == pyglet.window.key.UP:
-        snake.direction = 'up'
+        if snake.direction != 'down':
+            snake.direction = 'up'
     if symbol == pyglet.window.key.DOWN:
-        snake.direction = 'down'
+        if snake.direction != 'up':
+            snake.direction = 'down'
 
 def update(dt):
     global food, window_width, window_height
