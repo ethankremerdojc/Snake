@@ -5,7 +5,6 @@ import pickle
 import pyglet
 
 class Snake():
-
     def __init__(self):
         self.speed = 2  # blocks per second
         self.position = {"head": [12, 20], "body": [[11, 20], [10, 20], [9, 20], [8, 20]]}
